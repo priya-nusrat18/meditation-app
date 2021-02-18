@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.app {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100vh;
+}
+.time-select,
+.sound-picker,
+.prayer-container {
+	height: 80%;
+	flex: 1;
+    display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.prayer-container {
+    position: relative;
+}
+.prayer-container svg{
+    position: absolute;
+    height:50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.display-time{
+    position: absolute;
+    bottom: 10%;
+    color:#fff;
+    font-size: 50px;
+}
+video{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: -10;
+}
+.time-select button,
+.sound-picker button{
+    color:#fff;
+    width: 30%;
+    height: 10%;
+    font-size: 20px;
+    background: none;
+    border-radius: 5px;
+    border:2px solid #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.time-select button:hover{
+    color:#333;
+    background: #fff;
+}
+.sound-picker button{
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 30px;
+}
+.sound-picker button:nth-child(1){
+    background: #4972a1;
+}
+.sound-picker button:nth-child(2){
+    background: #a14f49;
+}
+.sound-picker button img{
+    height: 100%;
+}
